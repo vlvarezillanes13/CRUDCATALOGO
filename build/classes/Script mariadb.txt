@@ -1,0 +1,31 @@
+Enter password: ****
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 5
+Server version: 10.6.5-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> Create Database Prueba3;
+Query OK, 1 row affected (0.010 sec)
+
+MariaDB [(none)]> use Prueba3;
+Database changed
+MariaDB [Prueba3]> Create Table Proyecto(numeroInterno decimal(10,0) not null, nombreAplicacion varchar(50)not null, version decimal(5,3) null, plataforma varchar(10) not null, fechaInicio date not null, fechaEntrega date not null,urlGit varchar(300) not null,primary key (numeroInterno));
+Query OK, 0 rows affected (0.084 sec)
+
+MariaDB [Prueba3]> desc Proyecto;
++------------------+---------------+------+-----+---------+-------+
+| Field            | Type          | Null | Key | Default | Extra |
++------------------+---------------+------+-----+---------+-------+
+| numeroInterno    | decimal(10,0) | NO   | PRI | NULL    |       |
+| nombreAplicacion | varchar(50)   | NO   |     | NULL    |       |
+| version          | decimal(5,3)  | YES  |     | NULL    |       |
+| plataforma       | varchar(10)   | NO   |     | NULL    |       |
+| fechaInicio      | date          | NO   |     | NULL    |       |
+| fechaEntrega     | date          | NO   |     | NULL    |       |
+| urlGit           | varchar(300)  | NO   |     | NULL    |       |
++------------------+---------------+------+-----+---------+-------+
+7 rows in set (0.019 sec)
+
