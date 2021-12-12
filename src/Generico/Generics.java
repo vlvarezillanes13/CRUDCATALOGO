@@ -64,7 +64,7 @@ public class Generics {
     }
 
     public static boolean validarUrl(String url) {
-        Pattern pat = Pattern.compile("^(https://github.com/)");
+        Pattern pat = Pattern.compile("^(www.)[\\w-]+(\\.[\\w-]+)*(\\.[A-Za-z]{2,})$");
         Matcher mat = pat.matcher(url);
         return mat.find();
     }
